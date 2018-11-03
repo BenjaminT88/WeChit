@@ -1,0 +1,158 @@
+@import 'flexbox.less';
+
+@import 'fonts.less';
+
+@import 'variables.less';
+
+@import 'animations.less';
+
+html {
+  width: 100%;
+  height: 100%;
+  color: @text;
+  font-family: @baseFontFamily;
+  font-weight: @baseFontWeight;
+}
+
+body.forbidden {
+  display: none !important;
+}
+
+img {
+  user-select: none;
+}
+
+label {
+  font-size: 13px;
+  line-height: 28px;
+  font-weight: 700;
+  padding-right: 7px;
+}
+
+.tc-modal {
+  z-index: -1;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity @transitionTime;
+
+  &.show {
+    display: block;
+    opacity: 1;
+
+    .tc-dialog {
+      transform: translateY(0);
+    }
+  }
+
+  .tc-dialog {
+    transform: translateY(100%);
+    transition: transform @transitionTime;
+    padding: 40px;
+    text-align: center;
+
+    // Fixed maximum width in the pop up containers of 280px + 80px of padding
+    max-width: 360px;
+
+    .close {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 21px;
+      right: 18.9px;
+      cursor: pointer;
+    }
+
+    header {
+      font-size: 16px;
+      color: #4f4f4f;
+    }
+
+    header, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    hr {
+      border: 0;
+      background: @blueText;
+      height: 1px;
+      width: 60%;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    p, .btn {
+      font-size: 12px;
+    }
+
+    p {
+      color: #9b9b9b;
+    }
+
+    .btn {
+      height: 35px;
+      line-height: 35px;
+      margin: 0 10px;
+    }
+  }
+}
+
+.visible {
+  visibility: visible;
+  z-index: 1000000;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+input, textarea {
+  font-family: @muliRegularFont, arial;
+
+  display: inline-block;
+
+  border: 1px solid #c5bbb4;
+  resize: none;
+  margin: 5px;
+  padding: 12px 10px;
+  width: 270px;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.tc-modal.contract {
+  header {
+    font-size: 24px;
+    @media @smartphonesPortrait {
+      font-size: 20px;
+    }
+    color: @blueText;
+    padding-bottom: 10px;
+  }
+
+  p {
+    font-family: "Open Sans", arial;
+    color: @text;
+    font-weight: 300;
+    font-size: 16px;
+
+    @media @smartphones {
+      font-size: 12px;
+    }
+
+    a {
+      color: @blueText;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+
+  .btn {
+    font-size: 14px;
+    margin: 0px;
+  }
+}

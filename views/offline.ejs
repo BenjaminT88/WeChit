@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>WeChit-RTC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="stylesheet" href="css/buttons.css" />
+  <% if (isWebRTCVersion) { %>
+    <link rel="stylesheet" href="css/checkboxes.css" />
+    <% } %>
+      <link rel="stylesheet" href="css/landing.opentok.css">
+
+      <!--[if IE]><link rel="shortcut icon" href="/favicon.ico"><![endif]-->
+      <link rel="icon" href="/favicon.png">
+
+      <script type="text/javascript" src="app.js"></script>
+
+      <script defer type="text/javascript" src="/js/vendor/es6-promise.min.js"></script>
+      <script defer type="text/javascript" src="/js/ie_polyfills.js"></script>
+      <script defer type="text/javascript" src="/js/components/modal.js"></script>
+      <script defer type="text/javascript" src="/js/vendor/lazy_loader.js"></script>
+      <script defer type="text/javascript" src="/js/rtcApp.js"></script>
+
+      <script>
+        window.isWebRTCVersion =<%=isWebRTCVersion %>;
+        window.showTos =<%=showTos %> && !sessionStorage.tosAccepted;
+      </script>
+</head>
+
+<body class="forbidden">
+  <section class="main">
+    <div id="righthand-container">
+      <div id="righthand-container-cell">
+        <section id="main-content">
+
+          <header>
+
+            <h1>No Internet Connection!</h1>
+
+            <img src="images/wechit_logo.jpeg" alt="WeChit logo">
+
+          </header>
+
+        </section>
+      </div>
+    </div>
+  </section>
+
+
+</body>
+
+</html>

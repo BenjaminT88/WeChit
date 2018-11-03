@@ -1,0 +1,78 @@
+@import 'variables.less';
+
+#opentok_canvas {
+  z-index: 1012;
+}
+
+[data-annotation-visible=true] #screen {
+  padding-right: 55px;
+
+  .streams[data-current-layout-type=float] .tc-list li[data-stream-type=publisher] {
+    right: 65px;
+  }
+}
+
+.ots-annotation-toolbar-container {
+  border-radius: 6px;
+  margin-top: 100px;
+  background-color: #29383f !important;
+  :first-child {
+    border-radius: 6px 6px 0 0;
+  }
+  :last-child {
+    border-radius: 0 0 6px 6px;
+  }
+  .annotation-btn {
+    padding: inherit;
+    background-color: #29383f !important;
+  }
+  .annotation-btn.selected {
+    background-color: #19262c !important;
+  }
+}
+
+[data-annotation-visible=true] .ots-annotation-toolbar-container {
+  opacity: 1;
+  visibility: visible;
+}
+
+[data-annotation-visible=true] #annotate {
+  background-image: url(/images/icons/active-circle.svg);
+}
+
+[data-annotation-visible=false] #annotate {
+  background-image: url(/images/icons/inactive-circle.svg);
+}
+
+.ots-annotation-toolbar-container {
+  opacity: 0;
+  visibility: hidden;
+  transition: all @transitionTime;
+
+  z-index: 1001;
+  top: 18px;
+  right: 9.5px;
+
+  & > div {
+    input {
+      margin: 0;
+    }
+
+    input:focus {
+      outline:none;
+    }
+
+    .OT_panel {
+      border-radius: 8px;
+    }
+
+    .OT_subpanel, .color-picker {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      height: auto;
+      top: 6px;
+      right: 71px;
+      background-color: #29383f;
+    }
+  }
+}

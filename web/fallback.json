@@ -1,0 +1,10 @@
+{
+  "message": [
+    {
+      "title": "Dog fails to go online, finds ball",
+      "url": "",
+      "urlToImage": "./images/fetch-dog.jpg",
+      "description": "Try loading the page again when you're online."
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+.btn,
+.btn-no-underline,
+.btn-padding {
+  font-family: @muliRegularFont, arial;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  display: inline-block;
+  border-radius: 0px;
+  text-align: center;
+  line-height: 50px;
+  transition: all 0.5s ease-out;
+  font-size: 16px;
+  height: 50px;
+  border: 0;
+}
+
+.btn:hover,
+.btn-no-underline,
+.btn-padding:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-padding,
+.btn-no-underline {
+  padding: 0 30px;
+}
+
+.btn-padding-large {
+  padding: 0 50px;
+}
+
+.btn-padding-small {
+  padding: 0 20px;
+}
+
+.btn-blue {
+  border-radius: 4px;
+  background-color: #10a9dc;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.btn-blue:hover {
+  color: #fff;
+  background-color: #007ba3;
+  box-shadow: 0 0 0 2px #0099cb;
+}
+
+.btn-white {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px #0099cb;
+  color: #0099cb;
+}
+
+.btn-white:hover {
+  color: #0099cb;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px #0099cb;
+}
+
+.ctaarrow-white:after {
+  display: inline-block;
+  content: "";
+  background-image: url("/images/icons/ctaarrow_white@2x.png");
+  background-size: 9px 16px;
+  width: 9px;
+  height: 16px;
+  vertical-align: middle;
+  margin-left: 15px;
+  transition: all 0.5s ease-out;
+}
+
+.ctaarrow-white-small:after {
+  margin-left: 10px;
+}
+.ctaarrow-white:hover:after {
+  background-size: 9px 16px;
+  transform: translate(3px, 0px);
+}
+
+.ctaarrow-blue:after {
+  display: inline-block;
+  content: "";
+  background-image: url("/images/icons/ctaarrow-blue@2x.png");
+  background-size: 9px 16px;
+  width: 9px;
+  height: 16px;
+  vertical-align: middle;
+  margin-left: 15px;
+  transition: all 0.5s ease-out;
+}
+
+.ctaarrow-blue:hover:after {
+  background-size: 9px 16px;
+  transform: translate(3px, 0px);
+}
