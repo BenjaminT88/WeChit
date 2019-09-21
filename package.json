@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/opentok/opentok-rtc/",
   "dependencies": {
-    "bower": "^1.6.5",
+    "bower": "^1.8.8",
     "cors": "^2.7.1",
     "daemon": "^1.1.0",
     "ejs": "^2.5.5",
